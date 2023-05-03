@@ -12,7 +12,7 @@ ico2 = 'tk_ico_people.png'
 window1 = Tk()
 
 window1.title('Базы данных')
-window1.geometry('300x400')
+window1.geometry('300x450')
 window1.resizable(FALSE, FALSE)
 
 icon_image1 = PhotoImage(file=ico1)
@@ -40,18 +40,19 @@ label_frame_action = LabelFrame(window1, text="Дейстивия")
 label_frame_action.pack(padx=padx, pady=pady)
 
 button_import = Button(label_frame_action, text='Импортировать')
-button_import.grid(padx=padx, pady=pady, row=0, column=0)
+button_import.grid(padx=padx, pady=pady, row=1, column=0)
 
 button_export = Button(label_frame_action, text='Экспортировать')
-button_export.grid(padx=padx, pady=pady, row=1, column=0)
+button_export.grid(padx=padx, pady=pady, row=1, column=1)
 
 button_open = Button(label_frame_action, text='Открыть')
-button_open.grid(padx=padx, pady=pady, row=0, column=1)
+button_open.grid(padx=padx, pady=pady, row=0, column=2)
 
-button_additionally = Button(label_frame_action, text='Дополнительно')
-button_additionally.grid(padx=padx, pady=pady, row=1, column=1)
+button_delete = Button(label_frame_action, text='Удалить')
+button_delete.grid(padx=padx, pady=pady, row=0, column=0)
 
-
+button_edit_name = Button(label_frame_action, text='Переименовать')
+button_edit_name.grid(padx=padx, pady=pady, row=0, column=0)
 
 
 

@@ -8,11 +8,13 @@ pady = 4
 ico1 = 'tk_ico.png'
 ico2 = 'tk_ico_people.png'
 
+ico1 = PhotoImage(file=ico1)
+ico2 = PhotoImage(file=ico2)
 
 wind1 = Tk()
 
-icon_image1 = PhotoImage(file=ico1)
-wind1.iconphoto(True, icon_image1)
+
+wind1.iconphoto(True, ico1)
 
 
 wind1.geometry('300x400')

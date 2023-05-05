@@ -3,11 +3,15 @@ import os
 import sys
 import json
 
+
 padx = 4
 pady = 4
 
-ico1 = 'tk_ico_files.png'
-ico2 = 'tk_ico_people.png'
+ico1 = 'ico_files.png'
+ico2 = 'ico_people.png'
+
+ico1 = PhotoImage(file=ico1)
+ico2 = PhotoImage(file=ico2)
 
 #Окно выбора базы данных
 window1 = Tk()
@@ -16,8 +20,8 @@ window1.title('Базы данных')
 window1.geometry('300x450')
 window1.resizable(FALSE, FALSE)
 
-icon_image1 = PhotoImage(file=ico1)
-window1.iconphoto(True, icon_image1)
+
+window1.iconphoto(True, ico1)
 
 
 label_frame_search = LabelFrame(window1, text='Поиск')
@@ -59,8 +63,9 @@ button_edit_name.grid(padx=padx, pady=pady, row=0, column=0)
 #окно выбора персоны из базы данных
 window2 = Tk()
 
-icon_image2 = PhotoImage(file=ico2)
-window2.iconphoto(True, icon_image2)
+
+window1.iconphoto(True, ico1)
+
 window2.title('База данных')
 window2.geometry('420x490')
 window2.resizable(FALSE, FALSE)
@@ -97,8 +102,8 @@ buttn_open.grid(padx=padx, pady=pady, row=0, column=2)
 #окно переименования
 window_rename = Tk()
 
-icon_image1 = PhotoImage(file=ico1)
-window_rename.iconphoto(True, icon_image1)
+
+window_rename.iconphoto(True, ico1)
 window_rename.title('Переименовать')
 window_rename.geometry('300x100')
 window_rename.resizable(FALSE, FALSE)
@@ -117,8 +122,8 @@ button_set.pack(padx=padx, pady=pady)
 #окно создания базы данных
 window_create_baze = Tk()
 
-icon_image1 = PhotoImage(file=ico1)
-window_create_baze.iconphoto(True, icon_image1)
+
+window_create_baze.iconphoto(True, ico1)
 window_create_baze.title('Переименовать')
 window_create_baze.geometry('300x150')
 window_create_baze.resizable(FALSE, FALSE)
@@ -143,14 +148,19 @@ button_set_name.pack(padx=padx, pady=pady)
 
 
 #defs
+##вызываем окно 1 базы данных
 def win1():
+
     window1.mainloop()
 
+##переносим список баз данных из папки "bases"
 def insert_listbox_baze():
     direct = 'main\\bases'
     list_bazes = os.listdir(direct)
     listbox_bazes.insert(END, *list_bazes)
-insert_listbox_baze()
+
 win1()
+
+
 
 

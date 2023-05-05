@@ -6,12 +6,15 @@ root = Tk()
 padx = 4
 pady = 4
 
-ico1 = 'tk_ico_files.png'
-ico2 = 'tk_ico_people.png'
+ico1 = 'ico_files.png'
+ico2 = 'ico_people.png'
+
+ico1 = PhotoImage(file=ico1)
+ico2 = PhotoImage(file=ico2)
 
 
-icon_image1 = PhotoImage(file=ico1)
-root.iconphoto(True, icon_image1)
+root.iconphoto(True, ico1)
+
 root.title('Переименовать')
 root.geometry('300x150')
 root.resizable(FALSE, FALSE)

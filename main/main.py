@@ -9,6 +9,7 @@ pady = 4
 ico1 = 'tk_ico_files.png'
 ico2 = 'tk_ico_people.png'
 
+#Окно выбора базы данных
 window1 = Tk()
 
 window1.title('Базы данных')
@@ -55,13 +56,82 @@ button_edit_name = Button(label_frame_action, text='Переименовать')
 button_edit_name.grid(padx=padx, pady=pady, row=0, column=0)
 
 
+#окно выбора персоны из базы данных
+window2 = Tk()
+
+icon_image2 = PhotoImage(file=ico2)
+window2.iconphoto(True, icon_image2)
+window2.title('База данных')
+window2.geometry('420x490')
+window2.resizable(FALSE, FALSE)
+
+label_frame_baze_search = LabelFrame(window2, text='Поиск')
+label_frame_baze_search.pack()
+
+search_base_entry = Entry(label_frame_baze_search, width=35)
+search_base_entry.grid(padx=padx, pady=pady, row=0, column=0)
+
+search_baze_button = Button(label_frame_baze_search, text='Поиск')
+search_baze_button.grid(padx=padx, pady=pady, row=0, column=1)
 
 
 
+lisbox_bazes = Listbox(window2, width=45, height=16)
+lisbox_bazes.pack(padx=padx, pady=pady)
 
 
 
+labelbelframe_actions_bazes = LabelFrame(window2, text='Действия')
+labelbelframe_actions_bazes.pack(padx=padx, pady=pady)
 
+buttn_close = Button(labelbelframe_actions_bazes, text='Закрыть')
+buttn_close.grid(padx=padx, pady=pady, row=0, column=0)
+
+buttn_delete = Button(labelbelframe_actions_bazes, text='Удалить пункт')
+buttn_delete.grid(padx=padx, pady=pady, row=0, column=1)
+
+buttn_open = Button(labelbelframe_actions_bazes, text='Открыть')
+buttn_open.grid(padx=padx, pady=pady, row=0, column=2)
+
+
+#окно переименования
+window_rename = Tk()
+
+icon_image1 = PhotoImage(file=ico1)
+window_rename.iconphoto(True, icon_image1)
+window_rename.title('Переименовать')
+window_rename.geometry('300x100')
+window_rename.resizable(FALSE, FALSE)
+
+
+label_name_baze = Label(window_rename, text=f'Переименовать выбранный файл')
+label_name_baze.pack(padx=padx, pady=pady)
+
+entry_new_name = Entry(window_rename)
+entry_new_name.pack(padx=padx, pady=pady)
+
+button_set = Button(window_rename, text='Переименовать')
+button_set.pack(padx=padx, pady=pady)
+
+
+#окно создания базы данных
+window_create_baze = Tk()
+
+icon_image1 = PhotoImage(file=ico1)
+window_create_baze.iconphoto(True, icon_image1)
+window_create_baze.title('Переименовать')
+window_create_baze.geometry('300x150')
+window_create_baze.resizable(FALSE, FALSE)
+
+
+label_create_baze = Label(window_create_baze, text='Создать базу данных\n\nВведите название')
+label_create_baze.pack(padx=padx, pady=pady)
+
+entry_name_baze = Entry(window_create_baze)
+entry_name_baze.pack(padx=padx, pady=pady)
+
+button_set_name = Button(window_create_baze, text='Создать')
+button_set_name.pack(padx=padx, pady=pady)
 
 
 
